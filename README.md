@@ -12,7 +12,8 @@ The required tool:
 - Azure Databrick 
 - Azure HD Insight
 - Power BI
-- 
+
+
 ## WorkFlow
 ![workflow](https://user-images.githubusercontent.com/63108802/189586397-e0ab64c0-c0f0-456b-80d9-a53f02a78587.PNG)
 
@@ -41,7 +42,10 @@ Transform data through
 2. Azure HD Insight
 3. Azure Databrick 
 
-Data Flow 
+---
+
+1. Data Flow 
+
 - <B>Cases and Deaths data</B>
 ![Transform Cases and Deaths](https://user-images.githubusercontent.com/63108802/189596367-dd1403c6-0043-45ba-93cc-b83f55220c83.PNG)
 
@@ -52,13 +56,13 @@ Data Flow
 
 We split the file into 2 dataset which are 'Daily' and 'Weekly' because the original file put the number of cases both weekly and daily into one file. It's really difficult to analyze data when we use PowerBI tool. 
 
-<B>Daily</B>
+<I>Daily</I>
 
 This is the columns that we are going to adjust, and what column that we expected to be. 
 ![Transform Hospital Admission daily](https://user-images.githubusercontent.com/63108802/189596624-cdf5a77b-e7a0-4be4-ac01-c9fde8d446af.PNG)
 
 
-<B>Weekly</B>
+<I>Weekly</I>
 
 This is foe weekly dataset that we need it to be. 
 ![Transform Hospital Admission weekly](https://user-images.githubusercontent.com/63108802/189596652-dd358aa0-e3da-4cfa-a0e5-b6e42e5d4691.PNG)
@@ -67,13 +71,13 @@ This is the "Data Flow" which created on Data Factory, and then create Pipeline 
 ![Data Flow2](https://user-images.githubusercontent.com/63108802/189597891-6e829bb3-8295-4bb8-8100-c62c0b1ee998.PNG)
 
 
-Azure HD Insight
+2. Azure HD Insight
 
 Transform Testing data with Azure HD Insight, Firstly, To create HDInsight Cluster, upload the Hive script and Transform it through Data Factory. 
 ![testing data](https://user-images.githubusercontent.com/63108802/189602900-5e1e4f5b-78f2-4a42-9e13-65b9b5621e6f.PNG)
 
 
-Azure Databrick 
+3. Azure Databrick 
 
 To create Databrick Cluster, Mount file to ADLS, and Transform the Population data. 
 ![transform Population data](https://user-images.githubusercontent.com/63108802/189602941-acda3cca-3357-437f-83a6-9b4d3f297444.PNG)
