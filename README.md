@@ -51,6 +51,7 @@ Transform data through
 
 ![Data Flow1](https://user-images.githubusercontent.com/63108802/189597861-9205aee2-003d-43d2-b62f-44d6f45dd3e6.PNG)
 
+---
 
 - <B>Hospital Admission (split to Daily and Weekly)</B>
 
@@ -61,22 +62,23 @@ We split the file into 2 dataset which are 'Daily' and 'Weekly' because the orig
 This is the columns that we are going to adjust, and what column that we expected to be. 
 ![Transform Hospital Admission daily](https://user-images.githubusercontent.com/63108802/189596624-cdf5a77b-e7a0-4be4-ac01-c9fde8d446af.PNG)
 
+----
 
 <I>Weekly</I>
 
-This is foe weekly dataset that we need it to be. 
+This is for weekly dataset that we need it to be. 
 ![Transform Hospital Admission weekly](https://user-images.githubusercontent.com/63108802/189596652-dd358aa0-e3da-4cfa-a0e5-b6e42e5d4691.PNG)
 
 This is the "Data Flow" which created on Data Factory, and then create Pipeline to run the Data Flow. 
 ![Data Flow2](https://user-images.githubusercontent.com/63108802/189597891-6e829bb3-8295-4bb8-8100-c62c0b1ee998.PNG)
 
-
+---
 2. Azure HD Insight
 
 Transform Testing data with Azure HD Insight, Firstly, To create HDInsight Cluster, upload the Hive script and Transform it through Data Factory. 
 ![testing data](https://user-images.githubusercontent.com/63108802/189602900-5e1e4f5b-78f2-4a42-9e13-65b9b5621e6f.PNG)
 
-
+----
 3. Azure Databrick 
 
 To create Databrick Cluster, Mount file to ADLS, and Transform the Population data. 
