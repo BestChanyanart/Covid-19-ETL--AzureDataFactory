@@ -2,7 +2,7 @@
 It is a part of Udemy course: [Azure Data Factory For Data Engineers - Project on Covid19](https://www.udemy.com/course/learn-azure-data-factory-from-scratch/)
 I enrolled this course the practice how to use Azure Service, mainly Azure Data Factory. 
 
-This project is about COVID-19 data, focusing on the ETL process with Azure Data Factory, but I also use other tools to do the Pipeline, following:  
+This project is about COVID-19 data, focusing on the ETL process with Azure Data Factory, but also use other tools to do the Pipeline, following:  
 
 The required tool: 
 - Azure Data Factory (ADF)
@@ -55,16 +55,19 @@ Transform data through
 
 
 3. Azure HD Insight
-Transform data with Azure HD Insight, Firstly, To create HDInsight Cluster, upload the Hive script. 
+
+Transform Testing data with Azure HD Insight, Firstly, To create HDInsight Cluster, upload the Hive script and Transform it through Data Factory. 
 ![testing data](https://user-images.githubusercontent.com/63108802/189602900-5e1e4f5b-78f2-4a42-9e13-65b9b5621e6f.PNG)
 
 
 4. Azure Databrick 
+
+To create Databrick Cluster, Mount file to ADLS, and Transform the Population data. 
 ![transform Population data](https://user-images.githubusercontent.com/63108802/189602941-acda3cca-3357-437f-83a6-9b4d3f297444.PNG)
 
 
-
 <B>Load data</B> to Azure SQL databases 
+
 Create the Notebook and define Schema, upload into Azure SQL. Then load the data through Azure Data Factory.
 
 
