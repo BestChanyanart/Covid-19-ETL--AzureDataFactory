@@ -1,8 +1,8 @@
 # Data Engineering by Azure Data Factory
 It is a part of Udemy course: [Azure Data Factory For Data Engineers - Project on Covid19](https://www.udemy.com/course/learn-azure-data-factory-from-scratch/)
-I enrolled this course the practice how to use Azure Service, mainly Azure Data Factory. 
+I enrolled this course because I want to practice how to use Azure Service, mainly Azure Data Factory. 
 
-This project is about COVID-19 data, focusing on the ETL process with Azure Data Factory, but also use other tools to do the Pipeline, following:  
+This project is about COVID-19 data, focusing on the ETL process with Azure Data Factory, but also use other tools in the Pipeline, following:  
 
 The required tool: 
 - Azure Data Factory (ADF)
@@ -17,7 +17,7 @@ The required tool:
 
 ## WorkFlow
 
-<B>Ingest/Extarct data from Sorce</B>
+###Ingest/Extarct data from Sorce
 
 We ingested data from 2 sources by using Azure Data Factory, create Link Service to each sources, then create the dataset for Source and Sink. 
 
@@ -35,7 +35,7 @@ We ingested data from 2 sources by using Azure Data Factory, create Link Service
 ![Copy activity](https://user-images.githubusercontent.com/63108802/189594063-b219e7b2-e1b4-4698-be30-74d0ec2de029.PNG)
 
 
-<B>Tranform data</B>
+###Tranform data
 Transform data through 
 1. Data Flow in Data Factory
 - Focus on <B>Cases and Deaths data</B>
@@ -66,7 +66,7 @@ To create Databrick Cluster, Mount file to ADLS, and Transform the Population da
 ![transform Population data](https://user-images.githubusercontent.com/63108802/189602941-acda3cca-3357-437f-83a6-9b4d3f297444.PNG)
 
 
-<B>Load data</B> to Azure SQL databases 
+###Load data to Azure SQL databases 
 
 Create the Notebook and define Schema, upload into Azure SQL. Then load the data through Azure Data Factory.
 
