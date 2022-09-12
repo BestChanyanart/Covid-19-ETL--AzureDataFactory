@@ -44,7 +44,7 @@ Transform data through
 ![Data Flow1](https://user-images.githubusercontent.com/63108802/189597861-9205aee2-003d-43d2-b62f-44d6f45dd3e6.PNG)
 
 
-- Focus <B>Hospital Admission (divided by Daily and Weekly)</B>
+- Focus <B>Hospital Admission (split to Daily and Weekly)</B>
 <B>Daily</B>
 ![Transform Hospital Admission daily](https://user-images.githubusercontent.com/63108802/189596624-cdf5a77b-e7a0-4be4-ac01-c9fde8d446af.PNG)
 
