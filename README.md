@@ -38,13 +38,17 @@ We ingested data from 2 sources by using Azure Data Factory, create Link Service
 ## Tranform data
 Transform data through 
 1. Data Flow in Data Factory
-- Focus on <B>Cases and Deaths data</B>
+2. Azure HD Insight
+3. Azure Databrick 
+
+Data Flow 
+- <B>Cases and Deaths data</B>
 ![Transform Cases and Deaths](https://user-images.githubusercontent.com/63108802/189596367-dd1403c6-0043-45ba-93cc-b83f55220c83.PNG)
 
 ![Data Flow1](https://user-images.githubusercontent.com/63108802/189597861-9205aee2-003d-43d2-b62f-44d6f45dd3e6.PNG)
 
 
-- Focus <B>Hospital Admission (split to Daily and Weekly)</B>
+- <B>Hospital Admission (split to Daily and Weekly)</B>
 <B>Daily</B>
 ![Transform Hospital Admission daily](https://user-images.githubusercontent.com/63108802/189596624-cdf5a77b-e7a0-4be4-ac01-c9fde8d446af.PNG)
 
@@ -54,13 +58,13 @@ Transform data through
 ![Data Flow2](https://user-images.githubusercontent.com/63108802/189597891-6e829bb3-8295-4bb8-8100-c62c0b1ee998.PNG)
 
 
-3. Azure HD Insight
+Azure HD Insight
 
 Transform Testing data with Azure HD Insight, Firstly, To create HDInsight Cluster, upload the Hive script and Transform it through Data Factory. 
 ![testing data](https://user-images.githubusercontent.com/63108802/189602900-5e1e4f5b-78f2-4a42-9e13-65b9b5621e6f.PNG)
 
 
-4. Azure Databrick 
+Azure Databrick 
 
 To create Databrick Cluster, Mount file to ADLS, and Transform the Population data. 
 ![transform Population data](https://user-images.githubusercontent.com/63108802/189602941-acda3cca-3357-437f-83a6-9b4d3f297444.PNG)
