@@ -1,6 +1,6 @@
 # Data Engineering by Azure Data Factory
 It is a part of Udemy course: [Azure Data Factory For Data Engineers - Project on Covid19](https://www.udemy.com/course/learn-azure-data-factory-from-scratch/)
-I enrolled this course because I want to practice how to use Azure Service, mainly Azure Data Factory. 
+I enrolled this course because I want to practice how to use Azure Service, mainly Azure Data Factory - Data Flow / Pipeline / Trigger. 
 
 This project is about COVID-19 data, focusing on the ETL process with Azure Data Factory, but also use other tools in the Pipeline, following:  
 
