@@ -49,12 +49,21 @@ Data Flow
 
 
 - <B>Hospital Admission (split to Daily and Weekly)</B>
+
+We split the file into 2 dataset which are 'Daily' and 'Weekly' because the original file put the number of cases both weekly and daily into one file. It's really difficult to analyze data when we use PowerBI tool. 
+
 <B>Daily</B>
+
+This is the columns that we are going to adjust, and what column that we expected to be. 
 ![Transform Hospital Admission daily](https://user-images.githubusercontent.com/63108802/189596624-cdf5a77b-e7a0-4be4-ac01-c9fde8d446af.PNG)
 
 
 <B>Weekly</B>
+
+This is foe weekly dataset that we need it to be. 
 ![Transform Hospital Admission weekly](https://user-images.githubusercontent.com/63108802/189596652-dd358aa0-e3da-4cfa-a0e5-b6e42e5d4691.PNG)
+
+This is the "Data Flow" which created on Data Factory, and then create Pipeline to run the Data Flow. 
 ![Data Flow2](https://user-images.githubusercontent.com/63108802/189597891-6e829bb3-8295-4bb8-8100-c62c0b1ee998.PNG)
 
 
