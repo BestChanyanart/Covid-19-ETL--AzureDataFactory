@@ -17,7 +17,7 @@ The required tool:
 ![workflow](https://user-images.githubusercontent.com/63108802/189586397-e0ab64c0-c0f0-456b-80d9-a53f02a78587.PNG)
 
 
-##Ingest/Extarct data from Sorce
+## Ingest/Extract data from Sorce
 
 We ingested data from 2 sources by using Azure Data Factory, create Link Service to each sources, then create the dataset for Source and Sink. 
 
@@ -35,7 +35,7 @@ We ingested data from 2 sources by using Azure Data Factory, create Link Service
 ![Copy activity](https://user-images.githubusercontent.com/63108802/189594063-b219e7b2-e1b4-4698-be30-74d0ec2de029.PNG)
 
 
-##Tranform data
+## Tranform data
 Transform data through 
 1. Data Flow in Data Factory
 - Focus on <B>Cases and Deaths data</B>
@@ -66,7 +66,7 @@ To create Databrick Cluster, Mount file to ADLS, and Transform the Population da
 ![transform Population data](https://user-images.githubusercontent.com/63108802/189602941-acda3cca-3357-437f-83a6-9b4d3f297444.PNG)
 
 
-##Load data to Azure SQL databases 
+## Load data to Azure SQL databases 
 
 Create the Notebook and define Schema, upload into Azure SQL. Then load the data through Azure Data Factory.
 
