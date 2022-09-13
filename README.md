@@ -27,13 +27,14 @@ We ingested data from 2 sources by using Azure Data Factory, create Link Service
  - [Covid-19 Hospital Admission data](https://github.com/cloudboxacademy/covid19/raw/main/ecdc_data/hospital_admissions.csv)
  - [Covid-19 Testing data](https://github.com/cloudboxacademy/covid19/raw/main/ecdc_data/testing.csv)
  
-![Copy activity 2](https://user-images.githubusercontent.com/63108802/189594590-77d1ffc3-229a-41d7-9aeb-a3c505d78c23.PNG)
+ ![Copy activity 3](https://user-images.githubusercontent.com/63108802/189801820-28f39bac-41cd-48c7-a59a-42fe4ff3750b.PNG)
 
 
 2. Population data
   - Population data 
   The data file is zipped. Put the file into Blob Storage on Storage Account, then ingest the file to ADLS through Data Factory. 
-![Copy activity](https://user-images.githubusercontent.com/63108802/189594063-b219e7b2-e1b4-4698-be30-74d0ec2de029.PNG)
+![Copy activity 2](https://user-images.githubusercontent.com/63108802/189594590-77d1ffc3-229a-41d7-9aeb-a3c505d78c23.PNG)
+
 
 
 ## Tranform data
