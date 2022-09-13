@@ -79,13 +79,16 @@ This is the "Data Flow" which created on Data Factory, and then create Pipeline 
 Transform "Testing data" with Azure HD Insight, Firstly, To create HDInsight Cluster, upload the Hive script and Transform it through Data Factory. 
 ![testing data](https://user-images.githubusercontent.com/63108802/189602900-5e1e4f5b-78f2-4a42-9e13-65b9b5621e6f.PNG)
 
+- (Hive Script)[https://github.com/BestChanyanart/Covid-19-ETL--AzureDataFactory/raw/main/HDinsight/covid_transform_testing.hql]
+
 ----
 3. Azure Databrick 
 
-To create Databrick Cluster, Mount file to ADLS, and Transform the Population data with Notebook. 
+To create Databrick Cluster, Mount storage to ADLS, and Transform the Population data with Notebook. 
 ![transform Population data](https://user-images.githubusercontent.com/63108802/189602941-acda3cca-3357-437f-83a6-9b4d3f297444.PNG)
 
-
+- [Mount_storage](https://github.com/BestChanyanart/Covid-19-ETL--AzureDataFactory/raw/main/databrick_notebook/mount_storage.py)
+- [Transform with PySpark](https://github.com/BestChanyanart/Covid-19-ETL--AzureDataFactory/raw/main/databrick_notebook/transform_population_data.py)
 
 ## Load data to Azure SQL databases 
 
