@@ -55,18 +55,22 @@ Transform data through
 --Action-- 
 1. Source Transformation: Add Souce File "Cases and Deaths" dataset, and edit Schema 
 2. Filter Transformation: Filter to get the data only Europe country 
+````
          continent == 'Europe' && not(isNull(country_code))
+````      
 3. Select Transformation: Select only relevant columns and remove irrelavant columns
 4. Pivot Transformation: To Transform data format from column "indicator" to separate into 2 columns (confirmed cases / deaths)
     4.1 Group By: To groupby columns
     4.2 Pivot Key: To identify column that we want to transform which is "indicator" columns and value "confirmed cases" , "deaths"
     4.3 Pivot Columns: To count number of each "confirmed cases" and "deaths" 
+````    
          sum(daily_count) = count 
+````         
 5. LookUp Transformation: To Join 2 dataset with Primary key ( Join with "CountryLookup" dataset)
 6. Select Transformation: To Select only Relevant columns and reorder columns. Last recheck before Sink file
 7. Sink Transformation: To identify the destination of dataset to Sink. 
 
---Create Pipeline
+--Create Pipeline--
 1. Pipeline to Run the dataflow
 2. Pipeline to identify the sink destination, which is "Azure SQL databases", and need to identify linkservice
 
@@ -98,30 +102,44 @@ This is the "Data Flow" which created on Data Factory, and then create Pipeline 
 3. Lookup Transformation: To Join 2 dataset with Primary key "country" name ( Join with "SourceLookup" dataset) to get the 2and3 digit of Country code columns
 4. Select Transformation: Select only relevant columns and remove irrelavant columns
 5. Conditional-Split Transformation: To identify the Condition for Split "Weekly" and "Daily" 
+````
             Weekly - indicator == 'Weekly new ICU admissions per 100k' || indicator == 'Weekly new hospital admissions per 100k'
             Daily - (default: Rows that do not meet any condition will use this output stream) 
+````            
 6. (Only Weekly) Join Transformation: To do Inner Join with another dataset "DimDate" to get start date and end date of week. 
     6.1 Derived-columns: To transform format of data (To be like this -  2016-W02  )
-            ecdc_year_week = year + '-W' + lpad(week_of_year, 2, '0')    
+````    
+            ecdc_year_week = year + '-W' + lpad(week_of_year, 2, '0')   
+````
     6.2 Aggragate: To find the start date and end date of week 
-            week_start_date = min(date)
+````    
+            week_start_date = min(date)            
             week_end_date = max(date)
+````            
 7. (Weekly) Pivot Transformation: To Transform data format from column "indicator" to separate into 2 columns 
     7.1 Group By: To groupby columns
     7.2 Pivot Key: To identify column that we want to transform which is "indicator" columns and value 
-        "Weekly new ICU admissions per 100k" , "Weekly new hospital admissions per 100k"
+````    
+            "Weekly new ICU admissions per 100k" , "Weekly new hospital admissions per 100k"
+````        
     7.3 Pivot Columns: To count number of each
-         sum(indicator) = count 
+````    
+            sum(indicator) = count 
+````         
 7. (Daily) Pivot Transformation: To Transform data format from column "indicator" to separate into 2 columns 
     7.1 Group By: To groupby columns
     7.2 Pivot Key: To identify column that we want to transform which is "indicator" columns and value 
-        "Daily hospital occupancy" , "Daily ICU occupancy"
+````    
+             "Daily hospital occupancy" , "Daily ICU occupancy"
+````        
     7.3 Pivot Columns: To count number of each
-         sum(indicator) = count 
+````
+             sum(indicator) = count 
+````
 8. Select Transformation: To Select only Relevant columns and reorder columns. Last recheck before Sink file
 7. Sink Transformation: To identify the destination of dataset to Sink. 
 
---Create Pipeline
+--Create Pipeline--
 1. Pipeline to Run the dataflow of each Daily and Weekly
 2. Pipeline to identify the sink destination, which is "Azure SQL databases", and need to identify linkservice
 
