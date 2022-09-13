@@ -60,8 +60,11 @@ Transform data through
 ````      
 3. Select Transformation: Select only relevant columns and remove irrelavant columns
 4. Pivot Transformation: To Transform data format from column "indicator" to separate into 2 columns (confirmed cases / deaths)
+
     4.1 Group By: To groupby columns
+    
     4.2 Pivot Key: To identify column that we want to transform which is "indicator" columns and value "confirmed cases" , "deaths"
+    
     4.3 Pivot Columns: To count number of each "confirmed cases" and "deaths" 
 ````    
          sum(daily_count) = count 
@@ -107,32 +110,44 @@ This is the "Data Flow" which created on Data Factory, and then create Pipeline 
             Daily - (default: Rows that do not meet any condition will use this output stream) 
 ````            
 6. (Only Weekly) Join Transformation: To do Inner Join with another dataset "DimDate" to get start date and end date of week. 
+
     6.1 Derived-columns: To transform format of data (To be like this -  2016-W02  )
 ````    
             ecdc_year_week = year + '-W' + lpad(week_of_year, 2, '0')   
 ````
-    6.2 Aggragate: To find the start date and end date of week 
+
+     6.2 Aggragate: To find the start date and end date of week 
+    
 ````    
             week_start_date = min(date)            
             week_end_date = max(date)
-````            
+````      
+
 7. (Weekly) Pivot Transformation: To Transform data format from column "indicator" to separate into 2 columns 
+
     7.1 Group By: To groupby columns
+    
     7.2 Pivot Key: To identify column that we want to transform which is "indicator" columns and value 
 ````    
             "Weekly new ICU admissions per 100k" , "Weekly new hospital admissions per 100k"
-````        
-    7.3 Pivot Columns: To count number of each
+````   
+
+     7.3 Pivot Columns: To count number of each
+    
 ````    
             sum(indicator) = count 
 ````         
 7. (Daily) Pivot Transformation: To Transform data format from column "indicator" to separate into 2 columns 
+
     7.1 Group By: To groupby columns
+    
     7.2 Pivot Key: To identify column that we want to transform which is "indicator" columns and value 
 ````    
              "Daily hospital occupancy" , "Daily ICU occupancy"
-````        
-    7.3 Pivot Columns: To count number of each
+````    
+
+     7.3 Pivot Columns: To count number of each
+    
 ````
              sum(indicator) = count 
 ````
