@@ -1,6 +1,4 @@
--- ********************** Important ******************************************
--- Make sure you change the storage account names to your storage account name
--- ********************** Important ******************************************
+
 
 CREATE DATABASE IF NOT EXISTS covid_reporting_lookup;
 CREATE DATABASE IF NOT EXISTS covid_reporting_raw;
