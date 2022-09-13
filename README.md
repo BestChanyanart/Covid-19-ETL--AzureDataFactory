@@ -76,19 +76,25 @@ This is the "Data Flow" which created on Data Factory, and then create Pipeline 
 ---
 2. Azure HD Insight
 
-Transform Testing data with Azure HD Insight, Firstly, To create HDInsight Cluster, upload the Hive script and Transform it through Data Factory. 
+Transform "Testing data" with Azure HD Insight, Firstly, To create HDInsight Cluster, upload the Hive script and Transform it through Data Factory. 
 ![testing data](https://user-images.githubusercontent.com/63108802/189602900-5e1e4f5b-78f2-4a42-9e13-65b9b5621e6f.PNG)
 
 ----
 3. Azure Databrick 
 
-To create Databrick Cluster, Mount file to ADLS, and Transform the Population data. 
+To create Databrick Cluster, Mount file to ADLS, and Transform the Population data with Notebook. 
 ![transform Population data](https://user-images.githubusercontent.com/63108802/189602941-acda3cca-3357-437f-83a6-9b4d3f297444.PNG)
+
 
 
 ## Load data to Azure SQL databases 
 
 Create the Notebook and define Schema, upload into Azure SQL. Then load the data through Azure Data Factory.
+
+## Summary services for this dataset that I created.
+
+![all service](https://user-images.githubusercontent.com/63108802/189931516-a3d858e8-ce07-4409-846c-9f6c2016c0d8.jpg)
+
 
 
 
