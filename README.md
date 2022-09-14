@@ -180,7 +180,8 @@ Create the Notebook and define Schema, upload into Azure SQL. Then load the data
 
 ## Summary services for this dataset that I created.
 
-![all service](https://user-images.githubusercontent.com/63108802/189931516-a3d858e8-ce07-4409-846c-9f6c2016c0d8.jpg)
+![Slide1](https://user-images.githubusercontent.com/63108802/190078231-da69b4df-61ea-422a-b131-f104c324b1dd.JPG)
+
 
 
 
